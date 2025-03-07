@@ -25,11 +25,6 @@ app.use(express.static('host'));
 app.use(express.static('viewer'));
 app.use('/uploads', express.static('uploads'));
 
-// server.js
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'host', 'login.html'));
-});
-
 
 const uploadFolder = "uploads";
 
