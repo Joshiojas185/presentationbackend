@@ -122,7 +122,7 @@ socket.on('pdfUploaded', (pdfPath) => {
 
 function loadPDF(pdfPath) {
     
-    const fullPath = `https://presentationbackend.onrender.com/${pdfPath}`;
+    const fullPath = `https://presentationbackend.onrender.com${pdfPath}`;
     // const fullPath = `http://192.168.29.153:5000${pdfPath}`; // Use the correct server URL
     pdfjsLib.getDocument(fullPath).promise.then(pdf => {
         pdfDoc = pdf;
