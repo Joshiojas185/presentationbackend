@@ -205,7 +205,7 @@ const io = socketIo(server, {
 // Serve static files
 app.use(cors());
 app.use(express.static(path.join(__dirname, '../host'))); // Serve frontend files
-app.use(express.static(path.join(__dirname,'/..viewer')));
+app.use(express.static(path.join(__dirname,'../viewer')));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads'))); // Serve uploads from the new location
 
 const uploadFolder = path.join(__dirname, 'uploads'); // Update this path
