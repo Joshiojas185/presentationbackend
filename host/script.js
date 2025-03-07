@@ -1,5 +1,5 @@
 
-const socket = io('http://10.33.0.21:5000');
+const socket = io('https://presentationbackend.onrender.com/');
 
 // Set the worker source for PDF.js
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
@@ -122,7 +122,7 @@ socket.on('pdfUploaded', (pdfPath) => {
 
 function loadPDF(pdfPath) {
     
-    const fullPath = `http://10.33.0.21:5000${pdfPath}`;
+    const fullPath = `https://presentationbackend.onrender.com/${pdfPath}`;
     // const fullPath = `http://192.168.29.153:5000${pdfPath}`; // Use the correct server URL
     pdfjsLib.getDocument(fullPath).promise.then(pdf => {
         pdfDoc = pdf;

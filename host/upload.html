@@ -22,7 +22,7 @@
             const formData = new FormData();
             formData.append("pdf", file);
 
-            fetch("http://10.33.0.21:5000/upload", { // Replace with your backend IP
+            fetch("https://presentationbackend.onrender.com/upload", { // Replace with your backend IP
                 method: "POST",
                 body: formData
             })
