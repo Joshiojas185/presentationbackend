@@ -208,6 +208,10 @@ app.use(express.static(path.join(__dirname, '../host'))); // Serve frontend file
 app.use(express.static(path.join(__dirname,'../viewer')));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads'))); // Serve uploads from the new location
 
+app.use('/host/slides', express.static(path.join(__dirname, '../host/slides'))); // Serve slides from the host directory
+app.use('/user/slides', express.static(path.join(__dirname, '../user/slides'))); // Serve slides from the user directory
+
+
 const uploadFolder = path.join(__dirname, 'uploads'); // Update this path
 
 // Ensure 'uploads' folder exists
